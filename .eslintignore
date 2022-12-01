@@ -1,0 +1,8 @@
+node_modules
+build
+public
+reportWebVitals.js
+serviceWorker.js
+setupTests.js
+index.js
+*.test.js

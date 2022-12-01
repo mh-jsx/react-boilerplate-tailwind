@@ -1,0 +1,113 @@
+/*  # TAILWIND GLOBAL IMPORTS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONT CDN/IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+
+/* # BRING IN normalize.css */
+@import-normalize;
+
+/* # Custom font-face */
+@import "../assets/fonts/typefaces.css";
+
+/* ================ VARIABLES ================ */
+
+@layer base {
+  :root {
+    --base-bg: #000000;
+
+    --font-family-primary: "Montserrat", sans-serif;
+    --font-family-secondary: "Open Sans";
+    --font-base: 16px;
+    --line-height-base: 1.2;
+    --box-shadow-primary: 0px 0px 20px #0000002b;
+
+    --color-primary: #ff005e;
+    --color-secondary: #0f0f0f;
+    --color-white: #ffffff;
+    --color-dark: #242424;
+    --color-info: #0084c4;
+    --color-danger: #ed1c17;
+    --color-success: #1ed760;
+    --color-warning: #ffbb00;
+    --color-gray: #666666;
+    --color-dark-gray: #202020;
+  }
+}
+
+/* ================ BASE STYLING ================ */
+
+body,
+html {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-base);
+  line-height: var(--line-height-base);
+  background: var(--base-bg);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  color: white;
+}
+a,
+p {
+  font-family: var(--font-family-primary-serif);
+  color: inherit;
+}
+img,
+svg {
+  display: inline-block;
+}
+p {
+  line-height: 1.3;
+}
+
+/*CUSTOMIZE SCROLL BAR  */
+
+html {
+  scrollbar-color: var(--color-primary) transparent;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 2px;
+}
+
+html::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* ================  CUSTOM TAILWIND UTILITIES ================ */
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .m-screen {
+    @apply max-w-[1920px] mx-auto;
+  }
+}
+
+/* ================  GLOBAL MEDIA ================ */
+
+/* # media */
+@media screen and (min-width: 1600px) {
+  body,
+  html {
+    font-size: 20px;
+  }
+}

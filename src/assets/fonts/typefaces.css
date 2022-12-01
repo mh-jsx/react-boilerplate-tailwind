@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "GoodTimesRg-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("GoodTimesRg-Regular"), url("./good-times.woff") format("woff");
+}
+@font-face {
+  font-family: "Gotham Book";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gotham Book"), url("./gotham-book.woff");
+}
